@@ -1,0 +1,297 @@
+=== Slide 1 ===
+An Independent Platform for Voice-Native 
+OS Navigation by Individuals with Severe Motor
+Impairment
+TEAM NO: 2
+Abhiram A R(SCT23CS007)
+Kevin L(SCT23CS037)
+Niyatha Suresh R(SCT23CS051)
+GUIDE: 
+Dr. Subu Surendran 1
+
+=== Slide 2 ===
+TABLE OF 
+CONTENTS
+01
+INTRODUCTION
+02
+03 LITERATURE SURVEY PROBLEM STATEMENT
+04
+05
+06
+OBJECTIVE DESIGN CONCLUSION
+2
+
+=== Slide 3 ===
+Introduction
+3
+A real-time voice agent closes a continuous perception →  action loop: it
+hears speech, reasons over intent, and executes OS-level actions directly
+on a device (not just returning text like a chatbot).
+Audio is captured continuously, mapped to intent (ideally via a native
+audio-understanding model rather than a slower STT →  LLM →  TTS
+cascade), turned into executable commands, and run at the full OS level   
+
+=== Slide 4 ===
+t
+4
+After each action, the agent re-reads screen state (via screenshot/vision model or
+accessibility tree) and self-corrects on mismatch, since there's no human in the
+loop to catch errors.
+Native audio-understanding models are preferred over the cascaded STT →  LLM →
+TTS pipeline, since each stage in a cascade adds latency that compounds end-to-
+end 
+Introduction
+
+=== Slide 5 ===
+Existing Techniques 
+Command-based: fast but rigid, no unstructured speech
+Browser agents: web-only, no OS/native access
+Cascaded STT → LLM → TTS: latency compounds per stage
+Intent classifiers: text-only, not real-time OS actions
+Voice assistants: edge = fixed intents; cloud = needs connectivity,
+English-first.
+5
+
+=== Slide 6 ===
+LITERATURE SURVEY
+6
+
+=== Slide 7 ===
+ 1. An embedded end-to-end voice assistant
+7[1] Luca Lazzaroni, Francesco Bellotti, and Riccardo Berta. An embedded end-to-end voice assistant. Engineering
+Applications of Artificial Intelligence, 136:108998, 2024.
+PROBLEM SOLUTION
+Cloud assistants require Internet
+access increasing privacy risks
+Limited Offline Performance for
+existing assistants
+No End-to-End Architecture on
+prior works
+Fully Offline Voice Assistant
+End-to-End Deep Learning Pipeline
+Transfer Learning for Italian ASR
+Configurable System Architecture
+Extensible to Multiple Languages
+Cloud-Comparable ASR
+Performance
+Reduced Response Latency
+Optimized for Embedded Devices
+
+=== Slide 8 ===
+ 1. An embedded end-to-end voice assistant
+8[1] Luca Lazzaroni, Francesco Bellotti, and Riccardo Berta. An embedded end-to-end voice assistant. Engineering Applications of
+Artificial Intelligence, 136:108998, 2024.
+METHODOLOGY
+1.Phase 1: Speech classification
+2.Phase 2: Speech recognition
+3.Phase 3: Language understanding
+4.Phase 4: Speech synthesis
+5.Phase 5: System deployment
+
+=== Slide 9 ===
+9
+ 1. An embedded end-to-end voice assistant
+[1] Luca Lazzaroni, Francesco Bellotti, and Riccardo Berta. An embedded end-to-end voice assistant. Engineering Applications of
+Artificial Intelligence, 136:108998, 2024.
+SYSTEM 
+ARCHITECTURE
+
+=== Slide 10 ===
+10
+ 1. An embedded end-to-end voice assistant
+[1] Luca Lazzaroni, Francesco Bellotti, and Riccardo Berta. An embedded end-to-end voice assistant. Engineering
+Applications of Artificial Intelligence, 136:108998, 2024.
+Results
+
+=== Slide 11 ===
+[2] Federico Bruzzone, Walter Cazzola, Matteo Brancaleoni, and Dario Pellegrino. Sink or SWIM: Tackling real-time ASR at scale. IEEE
+Transactions on Audio, Speech and Language Processing, 34:2238–2248, 2026.
+2 .  Sink or SWIM: Tackling Real-Time ASR at Scale
+Limited Concurrent Transcription
+High GPU Resource Usage
+Poor Multi-Client Scalability
+Limited Asynchronous Support
+Latency–Accuracy Trade-off
+Multi-stream ASR inference
+Concurrent client support
+Buffer merging optimization
+Low-latency multilingual
+transcription
+PROBLEM SOLUTION
+11
+
+=== Slide 12 ===
+2 .  Sink or SWIM: Tackling Real-Time ASR at Scale
+12
+METHODOLOGY
+1.Phase 1 – Data Collection
+2.Phase 2 – Intent Extraction
+3.Phase 3 – Semantic Clustering
+4.Phase 4 – Coverage Maximization
+5.Phase 5 – Intent Prioritization
+[2] Federico Bruzzone, Walter Cazzola, Matteo Brancaleoni, and Dario Pellegrino. Sink or SWIM: Tackling real-time ASR at scale. IEEE
+Transactions on Audio, Speech and Language Processing, 34:2238–2248, 2026.
+
+=== Slide 13 ===
+[2] Federico Bruzzone, Walter Cazzola, Matteo Brancaleoni, and Dario Pellegrino. Sink or SWIM: Tackling real-time ASR at scale. IEEE
+Transactions on Audio, Speech and Language Processing, 34:2238–2248, 2026.
+2 .  Sink or SWIM: Tackling Real-Time ASR at Scale
+13
+SYSTEM 
+ARCHITECTURE
+
+=== Slide 14 ===
+14
+Model (Italian, Common Voice test
+set) WER (%) CER (%) Transcription time(s)
+Ours (QuartzNet15x5, NeMo-based) 117 312 215
+Vosk 298 125 464
+DeepSpeech (fine-tuned) 458 1.324 1.778
+Results
+[2] Federico Bruzzone, Walter Cazzola, Matteo Brancaleoni, and Dario Pellegrino. Sink or SWIM: Tackling real-time ASR at scale. IEEE
+Transactions on Audio, Speech and Language Processing, 34:2238–2248, 2026.
+2 .  Sink or SWIM: Tackling Real-Time ASR at Scale
+
+=== Slide 15 ===
+[3] C. B. Chandrakala, R. Bhardwaj, and C. Pujari. An intent recognition pipeline for conversational AI. International Journal of 
+Information Technology, 16:731–743, 2024.
+3 .  An intent recognition pipeline for conversational AI
+Manual intent annotation is expensive
+Annotator bias affects quality
+No standard intent discovery method
+Lack of intent prioritization strategies
+Paraphrases and misspellings reduce
+coverage
+Automated Intent Discovery
+Semantic Intent Expansion
+Misspelling & Synonym Detection
+Coverage-Based Intent
+Prioritization
+PROBLEM SOLUTION
+15
+
+=== Slide 16 ===
+3. An intent recognition pipeline for conversational AI
+16
+METHODOLOGY
+1.Phase 1: Data Collection & Text Mining
+2.Phase 2: Token-Based Intent Extraction
+3.Phase 3: Semantic-Based Intent Extraction
+4.Phase 4: Coverage Maximization
+5.Phase 5: Intent Priority Ranking
+[3] C. B. Chandrakala, R. Bhardwaj, and C. Pujari. An intent recognition pipeline for conversational AI. International Journal of 
+Information Technology, 16:731–743, 2024.
+
+=== Slide 17 ===
+3.  An intent recognition pipeline for conversational AI
+17
+ALGORITHM
+[3] C. B. Chandrakala, R. Bhardwaj, and C. Pujari. An intent recognition pipeline for conversational AI. International Journal of 
+Information Technology, 16:731–743, 2024.
+
+=== Slide 18 ===
+18
+Metric Result
+Optimal Clusters 10 well-separated intent clusters identified using theSilhouette Score and Elbow Method.
+Best Topic Model LSA achieved the highest Silhouette Score of 0.46after grid search.
+Coverage Improvement Synonym (Word2Vec) and misspelling (FastText)expansion increased intent coverage by 10–11%.
+Intent Priority
+Phone Freeze (1.146) > Battery Problem (0.878) >
+Button Keywords (0.079) with minimal
+overlap/conflict.
+Pipeline Robustness Multi-stage approach recovered missed intents acrosscomponents, improving overall reliability.
+ 3.  An intent recognition pipeline for conversational AI
+Results
+[3] C. B. Chandrakala, R. Bhardwaj, and C. Pujari. An intent recognition pipeline for conversational AI. International Journal of 
+Information Technology, 16:731–743, 2024.
+
+=== Slide 19 ===
+Paper Research Gap Our Solution
+Paper 1
+LLMs omitted due to embedded
+device computational
+constraints.
+Integrated LLM for conversation
+Paper 2 No speech enhancement fornoisy environment robustness. AI Voice Isolation
+Paper 3
+Not evaluated in real-time
+accessibility-critical assistive
+environments.
+Real time intent recognition for
+OS navigation
+19
+RESEARCH GAP
+
+=== Slide 20 ===
+20
+PROBLEM  STATEMENT
+We are going to build a voice-native, self-correcting OS agent to give fully
+paralyzed individuals independent, real-time computer access without
+needing hands, browsers, or English-only cloud tools.
+
+=== Slide 21 ===
+7
+9
+21
+OBJECTIVES
+1.Develop a hybrid agent architecture capable of operating in both offline (local LLM) and online modes,
+achieving an average query inference time of ≤15 seconds across both modes.
+2.Implement a model-switching layer that allows users to select and swap between LLMs — including
+domestic models such as Sarvam AI — to expand support for Indian regional languages beyond
+English-only interaction.
+3.Improve agent response efficiency by implementing a caching mechanism for frequently used user
+workflows, reducing repeated-task execution time by a measurable margin compared to
+uncached execution.
+
+=== Slide 22 ===
+Generate Code
+Code requirements
+lang, os, permissions
+load appropriate skill
+file
+DESIGN
+Destructive,
+permissions, guardrails
+ Code execute
+single responsibility principle
+
+=== Slide 23 ===
+23
+METHODOLOGY
+Phase 1 -  Speech Understanding & Intent Capture
+Phase 2 -  Action Planning & Code Generation
+Phase 3 -  Screen State Perception
+Phase 4 -  Verification & Self-Correction
+Phase 5 - Latency Optimization & Offline Deployment
+
+=== Slide 24 ===
+CONCLUSION
+This system gives fully paralyzed individuals
+independent, full-OS control via real-time, verified,
+self-correcting speech-to-action — going beyond
+rigid command grammars with LLM code
+generation, and beyond blind execution with
+screen-state checks that self-correct without
+human fallback.
+It's also built for India and built to be free, with
+regional-language support (Sarvam AI) and offline
+mode. Future work: dysarthric speech adaptation,
+hybrid deployment, and hardware-aware model
+selection. 24
+
+=== Slide 25 ===
+References
+[1] Luca Lazzaroni, Francesco Bellotti, and Riccardo Berta. An embedded end-to-end
+voice assistant. Engineering Applications of Artificial Intelligence, 136:108998, 2024.
+[2] Federico Bruzzone, Walter Cazzola, Matteo Brancaleoni, and Dario
+Pellegrino. Sink or SWIM: Tackling realtime ASR at scale. IEEE Transactions on Audio, Speech
+and Language Processing, 34:2238– 2248, 2026.
+[3] C. B. Chandrakala, R. Bhardwaj, and C. Pujari. An intent recognition pipeline for
+conversational AI. International Journal of Information Technology, 16:731–743, 2024.
+25
+
+=== Slide 26 ===
+26
+THANK YOU
+

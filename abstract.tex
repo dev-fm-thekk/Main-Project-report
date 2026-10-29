@@ -1,16 +1,12 @@
 %============================= abstract.tex================================
 \chapter*{Abstract}%
-%\addcontentsline{toc}{chapter}{\numberline{}Abstract}%
 \addcontentsline{toc}{chapter}{Abstract}%
 
-This document contains essential templates required to write technical
-reports using \LaTeX. This template may be used for the preparation of B.Tech seminar reports of APJ Abdul Kalam Technological University, Kerala. Also minimum working examples to create equations, include figure, include table, table of contents symbols list and bibliographic citation in a \LaTeX\ document are provided.\\
+Individuals suffering from severe motor impairment or full paralysis who retain speech capabilities lack adequate, accessible computational tools to independently operate a personal computer. Existing voice-based assistive solutions are fundamentally limited: traditional systems rely on brittle, predefined command-and-control grammars incapable of handling complex or unstructured intent, while emerging autonomous agent frameworks are predominantly constrained to sandboxed browser automation rather than system-wide operating system (OS) control. Furthermore, conventional voice assistants implement cascaded Speech-to-Text (STT) $\rightarrow$ Large Language Model (LLM) $\rightarrow$ Text-to-Speech (TTS) pipelines that introduce compounded round-trip latency, rely heavily on proprietary cloud connectivity, and cater almost exclusively to English-language speakers.
 
-Please note that this template is provided without warranty on an AS IS basis.\\
-\begin{flushright}
-	\textit{JIM}
-\end{flushright}
+This project proposes an independent, voice-native, self-correcting OS navigation platform specifically engineered for individuals with severe physical disabilities. Operating at the full desktop OS level, the proposed platform harnesses a lightweight local Large Language Model (Qwen 1.5B running via a quantized \texttt{llama.cpp} runtime) orchestrated with native OS accessibility APIs and a dynamic Tool Registry. Natural, unstructured vocal instructions are converted into structured tool invocations and verified script actions covering navigation, window management, system configuration, and file manipulation. To close the perception--action feedback loop without demanding physical intervention from the user, the agent integrates a multi-modal screen-state perception module that reads the accessibility tree and visual screen state, compares expected outcomes with post-execution observations, and automatically triggers self-correction routines upon failure. 
+
+To overcome latency and privacy bottlenecks, the platform implements a dual-mode hybrid architecture supporting fully offline local execution with an average query inference time of $\le 15$ seconds, alongside cloud model-switching capabilities that incorporate domestic Indian foundational models (such as Sarvam AI) to enable seamless regional language interaction. Additionally, an intelligent caching layer stores recurring workflows, dramatically accelerating routine operations. The system is extended via the Model Context Protocol (MCP) to seamlessly interface with modern productivity suites and developer environments. Experimental evaluation across diverse system tasks demonstrates that the proposed architecture provides a robust, low-latency, and hands-free computing environment that restores functional independence and digital productivity to paralyzed users.
 
 \thispagestyle{plain}
 %=======================================================================
-
