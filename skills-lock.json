@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "latex-to-image": {
+      "source": "latexto/skills",
+      "sourceType": "github",
+      "skillPath": "skills/latex-to-image/SKILL.md",
+      "computedHash": "26d8ddaa3369f80c228ad19e0265e1b67e1bbccce02cd78992e4f8a6b4c046f3"
+    },
+    "latex-to-pdf": {
+      "source": "latexto/skills",
+      "sourceType": "github",
+      "skillPath": "skills/latex-to-pdf/SKILL.md",
+      "computedHash": "b2a1e889d18d526ff9a47d542dc2a1ecb057b037a8a8d1d06fe433acccc0212f"
+    }
+  }
+}
